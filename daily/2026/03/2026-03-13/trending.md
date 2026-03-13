@@ -8,34 +8,42 @@
 
 | 排名 | 项目 | 语言 | 总星标 | 今日增长 | 描述 |
 |------|------|------|--------|----------|------|
-| 1 | [agency-agents](https://github.com/msitarzewski/agency-agents) | Shell | 37,347 | ⬆️ +4,168 | 完整 AI 代理机构 - 从前端专家到社区达人 |
-| 2 | [superpowers](https://github.com/obra/superpowers) | Shell | 80,989 | ⬆️ +1,706 | 代理技能框架与软件开发方法论 |
-| 3 | [MiroFish](https://github.com/666ghj/MiroFish) | Python | 20,399 | ⬆️ +1,857 | 群体智能引擎，预测万物 🇨🇳 |
-| 4 | [BitNet](https://github.com/microsoft/BitNet) | Python | 33,131 | ⬆️ +2,149 | 微软 1-bit LLM 推理框架 |
-| 5 | [hermes-agent](https://github.com/NousResearch/hermes-agent) | Python | 6,484 | ⬆️ +1,264 | 与你一起成长的智能代理 |
-| 6 | [page-agent](https://github.com/alibaba/page-agent) | TypeScript | 6,832 | ⬆️ +1,205 | 阿里 - 用自然语言控制网页界面 |
-| 7 | [fish-speech](https://github.com/fishaudio/fish-speech) | - | - | - | SOTA 开源 TTS 语音合成 |
-| 8 | [InsForge](https://github.com/InsForge/InsForge) | TypeScript | 3,365 | ⬆️ +263 | 为代理开发打造的后端 |
-| 9 | [hindsight](https://github.com/vectorize-io/hindsight) | Python | 3,332 | ⬆️ +217 | 代理记忆学习系统 |
-| 10 | [openrag](https://github.com/langflow-ai/openrag) | Python | 1,883 | ⬆️ +322 | 基于 Langflow 的 RAG 平台 |
+| 1 | [agency-agents](https://github.com/msitarzewski/agency-agents) | Shell | 37,760 | ⬆️ +5,758 | 完整 AI 代理机构 - 从前端专家到社区达人 |
+| 2 | [BitNet](https://github.com/microsoft/BitNet) | Python | 33,233 | ⬆️ +2,223 | 微软 1-bit LLM 官方推理框架 |
+| 3 | [superpowers](https://github.com/obra/superpowers) | Shell | 81,118 | ⬆️ +2,096 | 代理技能框架与软件开发方法论 |
+| 4 | [AstrBot](https://github.com/AstrBotDevs/AstrBot) | Python | 23,439 | ⬆️ +1,770 | 多平台 IM 聊天机器人基础设施 |
+| 5 | [page-agent](https://github.com/alibaba/page-agent) | TypeScript | 6,906 | ⬆️ +1,467 | 阿里 - 用自然语言控制网页界面 |
+| 6 | [browser](https://github.com/lightpanda-io/browser) | Zig | 14,289 | ⬆️ +1,175 | Lightpanda - 为 AI 设计的无头浏览器 |
+| 7 | [openrag](https://github.com/langflow-ai/openrag) | Python | 1,926 | ⬆️ +905 | 基于 Langflow 的综合 RAG 平台 |
+| 8 | [InsForge](https://github.com/InsForge/InsForge) | TypeScript | 3,398 | ⬆️ +763 | 为代理开发打造的全栈后端 |
+| 9 | [A2UI](https://github.com/google/A2UI) | TypeScript | 12,895 | ⬆️ +629 | 谷歌 A2UI 框架 |
+| 10 | [hindsight](https://github.com/vectorize-io/hindsight) | Python | 3,363 | ⬆️ +597 | 代理记忆学习系统 |
+| 11 | [promptfoo](https://github.com/promptfoo/promptfoo) | TypeScript | 14,534 | ⬆️ +503 | AI 提示测试与红队工具 |
+| 12 | [LiteRT](https://github.com/google-ai-edge/LiteRT) | C++ | 1,773 | ⬆️ +208 | 谷歌边缘部署 ML 框架 |
+| 13 | [dolt](https://github.com/dolthub/dolt) | Go | 20,848 | ⬆️ +58 | Git for Data - 数据版本控制 |
 
 ---
 
 ## 📊 今日趋势分析
 
 ### 🔝 增长最快
-1. **agency-agents** (+4,168 ⭐) - AI 代理工作流持续火热
-2. **MiroFish** (+1,857 ⭐) - 国产项目强势上榜
-3. **superpowers** (+1,706 ⭐) - 代理开发方法论受关注
+1. **agency-agents** (+5,758 ⭐) - AI 代理工作流爆发式增长
+2. **BitNet** (+2,223 ⭐) - 微软 1-bit LLM 引发关注
+3. **superpowers** (+2,096 ⭐) - 代理开发方法论持续热门
 
 ### 🌍 热门领域
-- **AI Agent** - 占据榜单 60%
-- **LLM 推理** - 微软 BitNet 领跑
-- **RAG 系统** - 企业应用需求增长
-- **语音合成** - fish-speech 开源替代
+- **AI Agent** - 占据榜单 70%+，从单点工具到完整工作流
+- **LLM 推理优化** - 1-bit 模型、边缘部署成新方向
+- **RAG 系统** - 企业级应用需求增长
+- **浏览器自动化** - 为 AI 设计的无头浏览器兴起
+
+### 🏢 大厂动态
+- **微软**: BitNet 1-bit LLM 推理框架
+- **阿里**: page-agent 网页界面代理
+- **谷歌**: A2UI、LiteRT 边缘部署框架
 
 ### 🇨🇳 中国项目
-- **MiroFish** (666ghj) - 群体智能预测引擎
+- **AstrBot** - 多平台 IM 聊天机器人，1700+ 今日增长
 - **page-agent** (alibaba) - 阿里网页代理框架
 
 ---
@@ -43,25 +51,29 @@
 ## 💡 值得关注的新技术
 
 ### 1-bit LLM 推理
-微软 BitNet 框架展示 1-bit 模型的高效推理能力，可能是边缘部署的新方向。
+微软 BitNet 框架展示 1-bit 模型的高效推理能力，可能是边缘设备部署 LLM 的新突破方向。
 
-### 代理记忆系统
-hindsight 等项目显示 AI 代理的长期记忆能力成为新热点。
+### AI 代理记忆系统
+hindsight 等项目显示 AI 代理的长期记忆和学习能力成为新竞争点，代理正从"一次性工具"向"持续学习伙伴"演进。
 
 ### 全栈代理开发
-InsForge 等项目致力于为 AI 代理提供完整的全栈应用开发能力。
+InsForge 等项目致力于为 AI 代理提供完整的全栈应用开发能力，降低代理应用开发门槛。
+
+### 为 AI 设计的浏览器
+Lightpanda (Zig 编写) 专为 AI 和自动化设计的无头浏览器，显示 AI 原生工具链正在形成。
 
 ---
 
 ## 📝 明日预测
 
-- AI Agent 相关项目热度将持续
-- 边缘 AI/轻量化模型受关注
-- 开源 TTS 领域竞争加剧
+- AI Agent 相关项目热度将持续，尤其是完整工作流解决方案
+- 边缘 AI/轻量化模型受更多关注（1-bit LLM、LiteRT）
+- 开源 TTS 和语音合成领域竞争加剧
+- 代理记忆和长期学习能力成为差异化竞争点
 
 ---
 
-**数据抓取时间**: 2026-03-13 18:20 (Asia/Shanghai)  
+**数据抓取时间**: 2026-03-13 20:01 (Asia/Shanghai)  
 **数据来源**: GitHub Trending  
 **更新频率**: 每日自动更新
 
