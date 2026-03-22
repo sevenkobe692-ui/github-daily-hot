@@ -1,0 +1,85 @@
+name: Daily GitHub Trending Update
+
+on:
+  schedule:
+    # 每天 UTC 00:00 运行 (北京时间 08:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-trending:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Fetch GitHub Trending
+        run: |
+          curl -s https://github.com/trending > trending.html
+          
+          # 提取今日趋势项目
+          echo "# 🔥 GitHub Trending Daily - $(date +%Y-%m-%d)" > DAILY_TRENDING.md
+          echo "" >> DAILY_TRENDING.md
+          echo "**更新时间**: $(date -u '+%Y-%m-%d %H:%M UTC')" >> DAILY_TRENDING.md
+          echo "" >> DAILY_TRENDING.md
+          echo "---" >> DAILY_TRENDING.md
+          echo "" >> DAILY_TRENDING.md
+          
+          # 解析 HTML 获取项目列表 (简化版)
+          echo "## 📈 今日热门项目" >> DAILY_TRENDING.md
+          echo "" >> DAILY_TRENDING.md
+          echo "*自动抓取中...*" >> DAILY_TRENDING.md
+          echo "" >> DAILY_TRENDING.md
+          echo "---" >> DAILY_TRENDING.md
+          echo "" >> DAILY_TRENDING.md
+          echo "*🤖 由 GitHub Actions 自动生成*" >> DAILY_TRENDING.md
+          
+          rm trending.html
+      
+      - name: Update weekly report
+        run: |
+          WEEK=$(date +%Y-W%V)
+          cat > WEEKLY_REPORT_${WEEK}.md << 'EOF'
+          # 📈 GitHub 仓库周报
+          
+          **生成时间**: $(date '+%Y-%m-%d %H:%M (Asia/Shanghai)')
+          
+          ---
+          
+          ## 📊 仓库统计
+          
+          | 仓库 | Stars | Forks | 状态 |
+          |------|-------|-------|------|
+          | github-daily-hot | $(curl -s https://api.github.com/repos/sevenkobe692-ui/github-daily-hot | jq -r '.stargazers_count') | $(curl -s https://api.github.com/repos/sevenkobe692-ui/github-daily-hot | jq -r '.forks_count') | 🟢 活跃 |
+          | openai-claw | $(curl -s https://api.github.com/repos/sevenkobe692-ui/openai-claw | jq -r '.stargazers_count') | $(curl -s https://api.github.com/repos/sevenkobe692-ui/openai-claw | jq -r '.forks_count') | 🟡 维护 |
+          | openclaw | $(curl -s https://api.github.com/repos/sevenkobe692-ui/openclaw | jq -r '.stargazers_count') | $(curl -s https://api.github.com/repos/sevenkobe692-ui/openclaw | jq -r '.forks_count') | 🟡 维护 |
+          
+          ---
+          
+          ## 🎯 本周目标
+          
+          - [ ] 完善 github-daily-hot 核心功能
+          - [ ] 争取获得第一个 Star ⭐
+          
+          ---
+          
+          *报告由 GitHub Actions 自动生成*
+          EOF
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          git add DAILY_TRENDING.md WEEKLY_REPORT_*.md
+          git diff --staged --quiet || git commit -m "📊 Auto-update: $(date +%Y-%m-%d) [skip ci]"
+          git push origin main
