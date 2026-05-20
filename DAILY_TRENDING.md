@@ -1,6 +1,6 @@
-# 🔥 GitHub Trending Daily - 2026-05-19
+# 🔥 GitHub Trending Daily - 2026-05-20
 
-**更新时间**: 2026-05-19 04:10 UTC
+**更新时间**: 2026-05-20 04:11 UTC
 
 ---
 
